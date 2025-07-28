@@ -1,0 +1,52 @@
+[
+  {
+    "name": "General Settings",
+    "settings": [
+      {
+        "type": "text",
+        "id": "site_title",
+        "label": "Site Title",
+        "default": "Visions eSports"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#000000"
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "text",
+        "id": "header_text",
+        "label": "Header Text",
+        "default": "Bienvenido a Visions eSports"
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "footer_text",
+        "label": "Footer Text",
+        "default": "© 2025 Visions eSports. Todos los derechos reservados."
+      }
+    ]
+  }
+]
