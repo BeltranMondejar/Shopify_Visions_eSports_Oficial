@@ -1,0 +1,29 @@
+# Ignorar archivos y carpetas comunes
+node_modules/
+dist/
+build/
+*.log
+Thumbs.db
+.DS_Store
+.vscode/
+.env
+.env.local
+.env.*.local
+bower_components/
+coverage/
+*.tmp
+*.swp
+*.exe
+*.dll
+*.obj
+*.pdb
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.psess
+*.user
+*.cache
+*.db
+*.pid
+assets/no subir/
