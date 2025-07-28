@@ -1,0 +1,310 @@
+{% schema %}
+{
+  "name": "Jugadores del Equipo",
+  "tag": "section",
+  "class": "players-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Nuestro Equipo",
+      "category": "Contenido"
+    }
+  ]
+}
+{% endschema %}
+
+<section id="players">
+  <h2 class="section-title">Nuestro Equipo eSports</h2>
+  <p class="section-description">
+    Conoce a los jugadores y jugadoras que representan a Visions eSports en los
+    torneos más importantes.
+  </p>
+
+  <!-- Masculino -->
+  <div class="team-block">
+    <h3 class="team-title">Visions MASC</h3>
+    <div class="players-grid">
+      <div class="player-card">
+        <img src="{{ 'Levi.png' | asset_url }}" alt="Duelista" />
+        <h3 class="player-name">Levi</h3>
+        <p class="player-role">Duelista</p>
+      </div>
+      <div class="player-card">
+        <img src="{{ 'Dollby.png' | asset_url }}" alt="Flasher" />
+        <h3 class="player-name">Dollby</h3>
+        <p class="player-role">Iniciador</p>
+      </div>
+      <div class="player-card">
+        <img src="{{ 'Mech.png' | asset_url }}" alt="Smoker" />
+        <h3 class="player-name">Mech</h3>
+        <p class="player-role">Smoker</p>
+      </div>
+      <div class="player-card">
+        <img src="{{ 'Dlak.jpeg' | asset_url }}" alt="Spotter" />
+        <h3 class="player-name">Dlak</h3>
+        <p class="player-role">Flex</p>
+      </div>
+      <div class="player-card">
+        <img src="{{ 'Subzy.jpeg' | asset_url }}" alt="Centinela" />
+        <h3 class="player-name">Subzy</h3>
+        <p class="player-role">Centinela</p>
+      </div>
+      <div class="player-card">
+        <img src="{{ 'Sleydark.jpg' | asset_url }}" alt="Coach" />
+        <h3 class="player-name">Sleydark</h3>
+        <p class="player-role">Coach</p>
+      </div>
+      <div class="player-card">
+        <img src="{{ 'Hitsu.jpeg' | asset_url }}" alt="Assistant Coach" />
+        <h3 class="player-name">Hitsu</h3>
+        <p class="player-role">Assistant Coach</p>
+      </div>
+    </div>
+  </div>
+  <!--
+    Femenino --
+    <div class="team-block">
+      <h3 class="team-title">Visions GC</h3>
+      <div class="players-grid">
+        <div class="player-card">
+          <img src="{{ 'avatar.png' | asset_url }}" alt="Duelista" />
+          <h3 class="player-name">Nombre F1</h3>
+          <p class="player-role">Duelista</p>
+        </div>
+        <div class="player-card">
+          <img src="{{ 'avatar.png' | asset_url }}" alt="Iniciador" />
+          <h3 class="player-name">Nombre F1</h3>
+          <p class="player-role">Iniciador</p>
+        </div>
+        <div class="player-card">
+          <img src="{{ 'avatar.png' | asset_url }}" alt="Smoker" />
+          <h3 class="player-name">Nombre F1</h3>
+          <p class="player-role">Smoker</p>
+        </div>
+        <div class="player-card">
+          <img src="{{ 'avatar.png' | asset_url }}" alt="Flex" />
+          <h3 class="player-name">Nombre F1</h3>
+          <p class="player-role">Flex</p>
+        </div>
+        <div class="player-card">
+          <img src="{{ 'avatar.png' | asset_url }}" alt="Centinela" />
+          <h3 class="player-name">Nombre F1</h3>
+          <p class="player-role">Centinela</p>
+        </div>
+        <div class="player-card">
+          <img src="{{ 'avatar.png' | asset_url }}" alt="Coach" />
+          <h3 class="player-name">Nombre F1</h3>
+          <p class="player-role">Coach</p>
+        </div>
+        <div class="player-card">
+          <img src="{{ 'avatar.png' | asset_url }}" alt="Manager" />
+          <h3 class="player-name">Nombre F1</h3>
+          <p class="player-role">Manager</p>
+        </div>
+      </div>
+    </div>
+  -->
+</section>
+
+<style>
+  /* Importación de fuentes */
+  @import url("https://fonts.googleapis.com/css2?family=Anybody:wght@400&family=Poppins:wght@700&display=swap");
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Anybody", sans-serif;
+    background-color: #0e0e0e;
+    color: #fff;
+    padding-top: 100px;
+    line-height: 1.6;
+  }
+
+  /* Sección Jugadores */
+  #players {
+    padding: 30px 50px 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Anybody", sans-serif; /* Cambiado a Anybody */
+  }
+
+  /* Título principal */
+  .section-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    color: #fddc48;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    /* Quitado text-shadow */
+    font-weight: 700;
+  }
+
+  /* Descripción general */
+  .section-description {
+    font-family: "Anybody", sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+  }
+
+  /* Bloques por equipo */
+  .team-block {
+    margin-bottom: 80px;
+  }
+
+  .team-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: #fddc48;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    /* Quitado text-shadow */
+    font-weight: 700;
+  }
+
+  /* Grid de jugadores */
+  .players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 0 30px;
+    justify-items: center;
+  }
+
+  /* Tarjeta de jugador */
+  .player-card {
+    background: #1a1a1a;
+    border-radius: 20px;
+    width: 240px;
+    flex-shrink: 0;
+    box-shadow: 0 0 15px rgba(253, 92, 5, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid transparent;
+  }
+  .player-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(253, 92, 5, 0.6);
+    border-color: #fd5c05;
+  }
+
+  /* Imagen del jugador */
+  .player-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-bottom: 3px solid #fd5c05;
+    transition: all 0.3s ease;
+    filter: grayscale(20%) brightness(0.95);
+  }
+  .player-card:hover img {
+    filter: brightness(1.15) contrast(1.1) saturate(1.2);
+  }
+
+  /* Nombre del jugador */
+  .player-name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #fddc48;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  /* Rol */
+  .player-role {
+    font-family: "Anybody", sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  /* MEDIA QUERIES */
+  @media (max-width: 768px) {
+    body {
+      padding-top: 60px;
+    }
+
+    #players {
+      padding: 30px 50px 80px;
+    }
+
+    /* Título principal */
+    .section-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      padding: 0 10px;
+      font-weight: 700;
+      /* Sin efectos */
+    }
+
+    /* Descripción general */
+    .section-description {
+      font-family: "Anybody", sans-serif;
+      font-size: 1rem;
+      padding: 0 15px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* Bloques por equipo */
+    .team-block {
+      margin-bottom: 50px;
+    }
+
+    .team-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
+      /* Sin efectos */
+    }
+
+    /* Grid de jugadores */
+    .players-grid {
+      grid-template-columns: 1fr;
+      padding: 0 15px;
+      gap: 25px;
+    }
+
+    /* Tarjeta de jugador */
+    .player-card {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .player-card img {
+      height: 220px;
+    }
+
+    /* Nombre del jugador */
+    .player-name {
+      font-family: "Poppins", sans-serif;
+      font-size: 1.2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    /* Rol */
+    .player-role {
+      font-family: "Anybody", sans-serif;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+</style>

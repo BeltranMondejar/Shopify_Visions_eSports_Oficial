@@ -1,0 +1,367 @@
+{% schema %}
+{
+  "name": "Presentación",
+  "tag": "section",
+  "class": "presentation-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Presentación del equipo",
+      "category": "Secciones personalizadas"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="presentation" id="presentation">
+  <div class="presentation-content">
+    <div class="left-column">
+      <div class="calendar-section">
+        <h3>Calendario Oficial</h3>
+        <div class="calendar-container">
+          <div class="calendario">
+            <h4>Próximo Partido</h4>
+            <p>00/00/00 - vs Proximamente - 00h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-column">
+      <div class="stats-section">
+        <h3>Estadísticas del Equipo</h3>
+        <div class="stats-container">
+          <div class="stat">
+            <h4>Partidos</h4>
+            <p>0</p>
+          </div>
+          <div class="stat">
+            <h4>Victorias</h4>
+            <p>0</p>
+          </div>
+          <div class="stat">
+            <h4>Derrotas</h4>
+            <p>0</p>
+          </div>
+        </div>
+      </div>
+      <div class="tournament-content">
+        <div class="tournament-header">
+          <img
+            src="{{ 'Logo_SDS.png' | asset_url }}"
+            alt="Logo Torneo"
+            class="tournament-logo"
+          />
+          <div class="tournament-text">
+            <h3>Spike Defuse Series</h3>
+            <p>
+              Consulta los resultados, enfrentamientos y toda la información del
+              torneo en nuestra página oficial.
+            </p>
+            <a
+              href="https://beltranmondejar.github.io/SpikeDefuseSeries/"
+              target="_blank"
+            >
+              <button class="tournament-button">Ir al Torneo</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Importación de fuentes */
+  @import url("https://fonts.googleapis.com/css2?family=Anybody:wght@400&family=Poppins:wght@700&display=swap");
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Anybody", sans-serif;
+    background-color: #0e0e0e;
+    color: #fff;
+    padding-top: 100px;
+    line-height: 1.6;
+  }
+
+  .presentation {
+    padding: 50px 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    background: linear-gradient(135deg, #121212 0%, #1c1c1c 100%);
+    font-family: "Anybody", sans-serif;
+  }
+
+  .presentation-content {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  /* === Columnas === */
+  .left-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+
+  /* === Calendario === */
+  .calendar-section {
+    background: linear-gradient(135deg, #121212 0%, #1c1c1c 100%);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(253, 215, 18, 0.2);
+    color: #f0f0f0;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(253, 215, 18, 0.1);
+    transition: all 0.3s ease;
+    font-family: "Anybody", sans-serif;
+  }
+
+  .calendar-section h3 {
+    color: #fdd712;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .calendar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .calendario {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .calendario h4 {
+    font-size: 18px;
+    color: #fdd712;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .calendario p {
+    font-size: 16px;
+    color: #ccc;
+  }
+
+  /* === Estadísticas === */
+  .stats-section {
+    background: linear-gradient(135deg, #121212 0%, #1c1c1c 100%);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(253, 215, 18, 0.2);
+    color: #f0f0f0;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(253, 215, 18, 0.1);
+    transition: all 0.3s ease;
+    font-family: "Anybody", sans-serif;
+  }
+
+  .stats-section h3 {
+    color: #fdd712;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stat {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .stat h4 {
+    font-size: 18px;
+    color: #fdd712;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .stat p {
+    font-size: 16px;
+    color: #ccc;
+  }
+
+  /* === Contenido torneo === */
+  .tournament-content {
+    background: linear-gradient(145deg, #1c1c1c, #121212);
+    border: 2px solid #fdd712;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(253, 215, 18, 0.15);
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    font-family: "Anybody", sans-serif;
+  }
+
+  .tournament-content:hover {
+    box-shadow: 0 8px 25px rgba(253, 215, 18, 0.25);
+  }
+
+  .tournament-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .tournament-logo {
+    max-width: 180px;
+    height: auto;
+    border-radius: 15px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 2.5));
+    cursor: default;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .tournament-text {
+    flex: 1;
+  }
+
+  .tournament-text h3 {
+    color: #fdd712;
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .tournament-text p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #ddd;
+    line-height: 1.5;
+  }
+
+  /* Botón torneo */
+  .tournament-button {
+    padding: 12px 30px;
+    background-color: #fd5c05;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(253, 215, 18, 0.3);
+    font-family: "Anybody", sans-serif;
+  }
+
+  .tournament-button:hover {
+    background-color: #fdd712;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-top: 60px;
+    }
+
+    .presentation {
+      padding: 30px 20px 60px;
+      gap: 40px;
+    }
+
+    .presentation-content {
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .left-column,
+    .right-column {
+      width: 100%;
+      max-width: 100%;
+      min-width: unset;
+      padding: 0 10px;
+    }
+
+    .calendar-section {
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .calendar-section h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .calendario h4 {
+      font-size: 16px;
+    }
+
+    .calendario p {
+      font-size: 14px;
+    }
+
+    .tournament-content {
+      padding: 25px;
+      border-radius: 16px;
+    }
+
+    .tournament-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .tournament-logo {
+      max-width: 140px;
+      margin-bottom: 15px;
+    }
+
+    .tournament-text h3 {
+      font-size: 22px;
+    }
+
+    .tournament-text p {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .tournament-button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+    }
+  }
+</style>

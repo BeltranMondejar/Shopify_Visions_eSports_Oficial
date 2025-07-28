@@ -1,0 +1,279 @@
+{% schema %}
+{
+  "name": "Hero principal",
+  "tag": "section",
+  "class": "hero-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Hero Visions eSports",
+      "category": "Inicio"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="hero">
+  <img
+    src="{{ 'wallpaper_jett.webp' | asset_url }}"
+    alt="Visions eSports Background"
+    class="hero-bg"
+  />
+  <div class="hero-left">
+    <h1 class="team-name">Visions eSports</h1>
+    <div class="separator"></div>
+    <h2 class="lema">El ojo que te apasiona, una familia que ilusiona</h2>
+    <a href="/pages/tienda">
+      <button class="shop-button">VISITA NUESTRA TIENDA</button>
+    </a>
+  </div>
+  <div class="social-bar">
+    <a href="https://x.com/eSports_visions" aria-label="Twitter">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+        alt="Twitter icon"
+      />
+    </a>
+    <a href="https://discord.gg/m5SenFzMAd" aria-label="Discord">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png"
+        alt="Discord icon"
+      />
+    </a>
+    <a href="https://www.twitch.tv/esports_visions" aria-label="Twitch">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2111/2111668.png"
+        alt="Twitch icon"
+      />
+    </a>
+    <a
+      href="https://www.tiktok.com/@visions.esports?lang=es-419"
+      aria-label="TikTok"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
+        alt="TikTok icon"
+      />
+    </a>
+    <a href="https://www.youtube.com/@VisionsEsports" aria-label="YouTube">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+        alt="YouTube icon"
+      />
+    </a>
+  </div>
+</section>
+
+<style>
+  /* Importación de fuentes */
+  @import url("https://fonts.googleapis.com/css2?family=Anybody:wght@400&family=Poppins:wght@700&display=swap");
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Anybody", sans-serif;
+    background-color: #0e0e0e;
+    color: #fff;
+    padding-top: 100px;
+    line-height: 1.6;
+  }
+
+  /* HERO Section */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    background-color: #0e0e0e;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1;
+  }
+  .hero-left {
+    position: relative;
+    z-index: 2;
+    max-width: 280px;
+    background-color: rgba(15, 15, 15, 0.75);
+    padding: 20px 25px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(253, 215, 18, 0.3);
+    font-family: "Anybody", sans-serif;
+  }
+  .team-name {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fdd712;
+    font-family: "Poppins", sans-serif;
+  }
+  .separator {
+    width: 50px;
+    height: 4px;
+    background-color: #fd5c05;
+    margin: 15px 0;
+  }
+  .lema {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+  .shop-button {
+    background-color: #fd5c05;
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: "Anybody", sans-serif;
+  }
+  .shop-button:hover {
+    background-color: #fdd712;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  /* Social-bar personalizado */
+  .social-bar {
+    position: fixed;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: rgba(14, 14, 14, 0.95);
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    border: 1px solid rgba(253, 215, 18, 0.3);
+  }
+  .social-bar a img {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    background-color: #fdd712;
+    padding: 6px;
+    transition: all 0.3s ease;
+    filter: grayscale(100%) brightness(0.9);
+  }
+  .social-bar a:hover img {
+    transform: scale(1.15);
+    filter: none;
+    background-color: #fd5c05;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-top: 60px;
+    }
+
+    .hero {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-left {
+      margin-bottom: 40px;
+      z-index: 2;
+    }
+
+    .social-bar {
+      position: fixed;
+      bottom: 60px;
+      right: 20px;
+      transform: none !important;
+      flex-direction: row;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 12px;
+      z-index: 9999 !important;
+    }
+
+    .social-bar a img {
+      width: 38px;
+      height: 38px;
+      padding: 5px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .footer-container {
+      flex-direction: column;
+      padding: 50px 30px;
+    }
+    .footer-left,
+    .footer-right {
+      max-width: 100%;
+    }
+    .hero {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 0 30px;
+    }
+    .social-bar {
+      position: static;
+      transform: none;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 30px;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .social-bar a img {
+      width: 32px;
+      height: 32px;
+      padding: 4px;
+      background-color: #fdd712;
+      border-radius: 6px;
+    }
+  }
+</style>

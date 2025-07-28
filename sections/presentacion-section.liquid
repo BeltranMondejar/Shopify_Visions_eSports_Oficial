@@ -1,0 +1,202 @@
+{% schema %}
+{
+  "name": "Visions",
+  "tag": "section",
+  "class": "visions-presentation-modern",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Hero Gaming Esports",
+      "category": "Contenido"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="visions-hero-modern" id="visions-presentation">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h2 class="subtitle">BIENVENID@ A</h2>
+        <h1 class="title">VISIONS <span>ESPORTS</span></h1>
+        <p class="description">
+          Somos una escuadra de élite con alma de comunidad. Dominamos el juego
+          con precisión, trabajo en equipo y pasión por los esports. No jugamos,
+          competimos.
+        </p>
+
+        <div class="features">
+          <div class="feature">
+            <div class="icon">⚡</div>
+            <h4>Competitividad</h4>
+            <p>Siempre vamos a ganar.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🧠</div>
+            <h4>Estrategia</h4>
+            <p>Jugamos con cabeza.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">❤️</div>
+            <h4>Comunidad</h4>
+            <p>Juntos somos más fuertes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <video controls poster="{{ 'banners_jett.png' | asset_url }}">
+          <source
+            src="{{
+              'https://cdn.shopify.com/videos/c/o/v/e189d23f72af44a39324844c790feffe.mp4'
+            }}"
+            type="video/mp4"
+          />
+          Tu navegador no soporta video HTML5.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Importación de fuentes */
+  @import url("https://fonts.googleapis.com/css2?family=Anybody:wght@400&family=Poppins:wght@700&display=swap");
+
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Anybody", sans-serif;
+    background-color: #0e0e0e;
+    color: #fff;
+    padding-top: 100px;
+    line-height: 1.6;
+  }
+
+  .visions-hero-modern {
+    background: linear-gradient(145deg, #0c0c0c 0%, #121212 100%);
+    padding: 30px 20px;
+    color: #fff;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-text {
+    max-width: 550px;
+  }
+
+  /* Títulos y textos con Poppins y Anybody según corresponda */
+  .subtitle {
+    font-family: "Poppins", sans-serif;
+    color: #fdd712;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .title span {
+    color: #fdd712;
+    text-shadow: 0 0 15px rgba(253, 215, 18, 0.6);
+  }
+
+  .description {
+    font-family: "Anybody", sans-serif;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+
+  .features {
+    display: flex;
+    gap: 20px;
+  }
+
+  .feature {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 16px;
+    flex: 1 1 160px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(253, 215, 18, 0.1);
+  }
+  .feature:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature .icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .feature h4 {
+    font-family: "Poppins", sans-serif;
+    color: #fdd712;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .feature p {
+    font-family: "Anybody", sans-serif;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  .hero-visual video {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(253, 215, 18, 0.15);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    body {
+      padding-top: 60px;
+    }
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .hero-text {
+      max-width: 100%;
+      text-align: center;
+    }
+    .features {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-visual video {
+      max-height: 300px;
+    }
+  }
+</style>

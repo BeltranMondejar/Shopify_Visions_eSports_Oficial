@@ -1,0 +1,220 @@
+{% schema %}
+{
+  "name": "Staff Visions",
+  "tag": "section",
+  "class": "staff-section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Equipo Staff",
+      "category": "Contenido"
+    }
+  ]
+}
+{% endschema %}
+
+<section id="staff" class="staff">
+  <h2 class="section-title">CONOCE NUESTRO STAFF</h2>
+  <p class="section-description">
+    El equipo que lidera y organiza nuestra comunidad de eSports.
+  </p>
+  <div class="staff-list">
+    <div class="staff-item">
+      <div class="staff-card">
+        <img src="{{ 'Queene.jpeg' | asset_url }}" alt="Queen" />
+        <div class="staff-info">
+          <h3>Queen</h3>
+          <p>CEO</p>
+        </div>
+      </div>
+    </div>
+    <div class="staff-item">
+      <div class="staff-card">
+        <img src="{{ 'MondyXz.webp' | asset_url }}" alt="MondyXz" />
+        <div class="staff-info">
+          <h3>MondyXz</h3>
+          <p>CEO &amp; Developer</p>
+        </div>
+      </div>
+    </div>
+    <div class="staff-item">
+      <div class="staff-card">
+        <img src="{{ 'Roze.webp' | asset_url }}" alt="Roze" />
+        <div class="staff-info">
+          <h3>Roze</h3>
+          <p>Diseñador Gráfico</p>
+        </div>
+      </div>
+    </div>
+    <div class="staff-item">
+      <div class="staff-card">
+        <img src="{{ 'Druk.webp' | asset_url }}" alt="Drukk" />
+        <div class="staff-info">
+          <h3>Drukk</h3>
+          <p>Diseñador Gráfico</p>
+        </div>
+      </div>
+    </div>
+    <div class="staff-item">
+      <div class="staff-card">
+        <img src="{{ 'Judiith.png' | asset_url }}" alt="Judith" />
+        <div class="staff-info">
+          <h3>Judith</h3>
+          <p>Community Manager</p>
+        </div>
+      </div>
+    </div>
+    <div class="staff-item">
+      <div class="staff-card">
+        <img src="{{ 'Dmondejarm.jpg' | asset_url }}" alt="Dmondejarm" />
+        <div class="staff-info">
+          <h3>Dmondejarm</h3>
+          <p>Developer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Importación de fuentes */
+  @import url("https://fonts.googleapis.com/css2?family=Anybody:wght@400&family=Poppins:wght@700&display=swap");
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Anybody", sans-serif;
+    background-color: #0e0e0e;
+    color: #fff;
+    padding-top: 30px;
+    line-height: 1.6;
+  }
+
+  /* Staff Section */
+  .staff {
+    padding: 120px 50px 80px;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(20, 20, 20, 1)
+    );
+    color: #fff;
+    text-align: center;
+    font-family: "Anybody", sans-serif;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    color: #fdd712;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  }
+  .section-description {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 50px;
+    font-family: "Anybody", sans-serif;
+    font-weight: 400;
+  }
+  .staff-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    row-gap: 60px;
+    justify-items: center;
+    align-items: stretch;
+    padding: 0 20px;
+  }
+  .staff-item {
+    display: flex;
+    justify-content: center;
+  }
+  .staff-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(253, 215, 18, 0.25);
+    font-family: "Anybody", sans-serif;
+    font-weight: 400;
+  }
+  .staff-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(253, 215, 18, 0.5);
+  }
+  .staff-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .staff-info h3 {
+    font-size: 1.4rem;
+    color: #fdd712;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+  }
+  .staff-info p {
+    font-size: 1rem;
+    color: #ccc;
+    font-family: "Anybody", sans-serif;
+    font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-top: 60px;
+    }
+
+    .staff {
+      padding: 30px 20px 30px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .section-description {
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+
+    .staff-list {
+      grid-template-columns: 1fr; /* Una sola columna en móvil */
+      gap: 30px;
+    }
+
+    .staff-card {
+      max-width: 100%;
+      padding: 16px;
+    }
+
+    .staff-card img {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 15px;
+    }
+
+    .staff-info h3 {
+      font-size: 1.2rem;
+    }
+
+    .staff-info p {
+      font-size: 0.95rem;
+    }
+  }
+</style>
